@@ -3,3 +3,6 @@ venv
 *devlog*
 code/test.py
 **__pycache__
+*.drawio*
+code/*.json
+requirements.txt

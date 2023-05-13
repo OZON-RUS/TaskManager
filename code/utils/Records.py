@@ -4,7 +4,7 @@ from time import time
 
 # Parent class for all types of Records
 class Record:
-    id_ = None
+    _id = None
 
     def _edit(self, *args, **kwargs):
         pass
@@ -21,8 +21,10 @@ class Task(Record):
     time: time = None
     isComplete: bool
 
+    # Object constructor
     def __init__(self, *args, **kwargs):
         super().__init__()
+        # init all the Task properties
         for key, value in kwargs.items():
             self.__setattr__(key, value)
-        self.id_ = self.name
+        self._id = self.name
